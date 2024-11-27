@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  lambda-read-files
+
+  Sample SAM Template for lambda-read-files
+
+Globals:
+  Function:
+    Timeout: 60
+    MemorySize: 512
+
+Resources:
+  DesagregarDebitosLambdaFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: DesagregarDebitosLambdaFunction
+      Handler: co.com.aws.lambda.handler.BillpayLambdaHandler::handleRequest
+      Runtime: java11
+      Architectures:
+        - x86_64
+      MemorySize: 512
+      Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
+        Variables:
+          BUKET_ARCHIVOS: "bpa-informe-recaudo-ath-dev-1"
+          BUKET_LLAVES: "bpa-informe-recaudo-ath-dev-1"
+          ENTRADA: "DividendosAval/HistoricoDividendosAval/"          
+          SALIDA: "DividendosAval/ProcesadosDividendosAval/"
+          PROCESADO: "DividendosAval/ProcesadosHistoricoDividendosAval/"
+          FRASE_SECRETA_PGP: "Xm/qDs9CP38bbMV9oAnBpIWRLGrmMNPnRCQLBOmhRHM71YeWJGZak2cJzeEAWNhfiixpkmZTSSk="
+          RUTA_LLAVE_PRIVADA_PGP: "DividendosAval/LlaveunicaATH_Privada.asc"
+          RUTA_LLAVE_PUBLICA_PGP: "DividendosAval/LlaveunicaATH_Plubica.asc"

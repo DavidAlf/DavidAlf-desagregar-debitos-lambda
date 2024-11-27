@@ -1,0 +1,59 @@
+[
+    {
+        "id": "1230901230910",
+        "entity": "Grupo Aval Acciones y Valores S.A.",
+        "code": "800216181",
+        "records": [
+            {
+                "id": "2058600024256",
+                "name": "David",
+                "value": 100
+            },
+            {
+                "id": "2058909416378",
+                "name": "Andres",
+                "value": 100
+            },
+            {
+                "id": "2058605274733",
+                "name": "Daniela",
+                "value": 200
+            },
+            {
+                "id": "2058605274733",
+                "name": "Daniela",
+                "value": 0
+            },
+            {
+                "id": "3000006",
+                "value": null
+            }
+        ]
+    },
+    {
+        "id": "1230901230910",
+        "entity": "Grupo Aval Acciones y Valores S.A.",
+        "code": "800216181",
+        "records": [
+            {
+                "id": "2058600024256",
+                "name": "David",
+                "value": 100
+            },
+            {
+                "id": "2058909416378",
+                "name": "Andres",
+                "value": 100
+            },
+            {
+                "id": "2058605274733",
+                "name": "Daniela",
+                "value": 500
+            },
+            {
+                "id": "3000005",
+                "value": null
+            }
+        ]
+    }
+]
